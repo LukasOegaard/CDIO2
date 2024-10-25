@@ -4,7 +4,7 @@ public class Die {
     
     private int faceValue;
 
-    Die() {
+    public Die() {
         this.faceValue = 1;
     }
 

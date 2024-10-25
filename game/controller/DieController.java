@@ -1,11 +1,25 @@
 package game.controller;
 
-import model.Die;
+import game.model.Die;
 
-puplic class DieController(){
+public class DieController{
 
-    Die die1; 
-    Die die2;
+    private static DieController instance;
+
+    private Die die1; 
+    private Die die2;
+
+    DieController () {
+        this.die1 = new Die();
+        this.die2 = new Die();
+    }
+
+    public static DieController getInstance() {
+        if (instance == null) {
+            instance = new DieController();
+        }
+        return instance;
+    }
 
     public void rollBoth(){
         die1.roll();
