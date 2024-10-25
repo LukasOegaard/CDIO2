@@ -4,7 +4,7 @@ public class Account {
 
     private int balance;
 
-    Account() {
+    public Account() {
         this.balance = 1000;
     }
 

@@ -5,7 +5,7 @@ public class Player {
     private String name;
     private Account account;
 
-    Player() {
+    public Player() {
         this.name = "unnamed-player";
         this.account = new Account();
     }
