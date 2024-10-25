@@ -1,11 +1,13 @@
 package game.model;
 
+import game.configuration.Config;
+
 public class Die {
     
     private int faceValue;
 
     public Die() {
-        this.faceValue = 1;
+        this.faceValue = Config.DEFAULT_DIE_FACE_VALUE;
     }
 
     public int getFaceValue() {
