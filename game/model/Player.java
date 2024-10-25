@@ -1,12 +1,14 @@
 package game.model;
 
 public class Player {
-    
+
     private String name;
     private Account account;
+    private int playerNumber;
 
-    public Player() {
+    public Player(int playerNumber) {
         this.name = "unnamed-player";
+        this.playerNumber = playerNumber;
         this.account = new Account();
     }
 
@@ -16,6 +18,10 @@ public class Player {
 
     public Account getAccount() {
         return this.account;
+    }
+
+    public int getPlayerNumber() {
+        return this.playerNumber;
     }
 
 }
