@@ -1,6 +1,7 @@
 package game.controller;
 
 import game.model.Player;
+import game.configuration.Config;
 
 import java.util.NoSuchElementException;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class PlayerController {
 
     private PlayerController() {
         this.players = new ArrayList<>();
-        this.setupPlayers(2);
+        this.setupPlayers(Config.NUMBER_OF_PLAYERS);
         this.nextPlayerNumber = 1;
     }
 
