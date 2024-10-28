@@ -6,16 +6,15 @@ import game.controller.PlayerController;
 import game.controller.TileController;
 import game.controller.UIController;
 
-
 public class Game {
-    
+
     private static Game instance;
     private boolean running;
     private PlayerController playerController;
     private DieController dieController;
     private TileController tileController;
     private UIController uiController;
-    
+
     public static void main(String[] args) {
         getInstance().startGame();
     }
@@ -39,22 +38,23 @@ public class Game {
         setup();
 
         while (this.running) {
-            
+
         }
     }
 
     private void setup() {
 
-        /* setup players + accounts via playerController() 
-        *  setup Die via DieController()
-        *  setup 
-        *  setup Language via languageController() 
-        */
+        /*
+         * setup players + accounts via playerController()
+         * setup Die via DieController()
+         * setup
+         * setup Language via languageController()
+         */
+        this.uiController.promptForLanguage();
         
-        for (Player player: this.playerController.getPlayers()) {
+        for (Player player : this.playerController.getPlayers()) {
             player.setName(this.uiController.promptForPlayerName(player));
-
         }
-        
+
     }
 }
