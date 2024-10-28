@@ -46,4 +46,17 @@ public class UIController {
         }
     }
 
+    public void printRoll(Player nextPlayer) {
+        Utils.println(this.languageController.getMessage(Message.PLAYER_PRESS_TO_ROLL, nextPlayer));
+        this.inputController.getNextInput();
+    }
+
+    public void printBalance(Player player) {
+        Utils.println(this.languageController.getMessage(Message.CURRENT_PLAYER_BALANCE, player));
+    }
+
+    public void printWin(Player player) {
+        Utils.println(this.languageController.getMessage(Message.WIN, player));
+    }
+
 }

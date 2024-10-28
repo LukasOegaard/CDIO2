@@ -27,9 +27,7 @@ public class Player {
     }
 
     public void setName(String name) {
-        if (name == Config.DEFAULT_PLAYER_NAME) {
-            this.name = name;
-        }
+        this.name = name;
     }
 
 }

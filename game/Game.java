@@ -1,8 +1,11 @@
 package game;
 
 import game.model.Player;
+import game.view.Utils;
+import game.configuration.Config;
 import game.controller.DieController;
 import game.controller.PlayerController;
+import game.controller.Tile;
 import game.controller.TileController;
 import game.controller.UIController;
 
@@ -38,23 +41,44 @@ public class Game {
         setup();
 
         while (this.running) {
+            gameLoop();
+        }
+    }
 
+    private void gameLoop() {
+        // current player rolls
+        // handle balance and printing
+        // show balance
+        // handle winning case
+        Player currentPlayer = this.playerController.getNextPlayer();
+        this.uiController.printRoll(currentPlayer);
+        this.dieController.rollBoth();
+        int sum = this.dieController.getSum();
+        Tile currentTile = this.tileController.getTile(sum);
+        Utils.println(currentPlayer.getName() + " landed on " + Integer.toString(sum));
+        int scoreConsequence = currentTile.getConsequence();
+        if (scoreConsequence > 0) {
+            currentPlayer.getAccount().increaseBalance(scoreConsequence);
+        } else {
+            currentPlayer.getAccount().decreaseBalance(scoreConsequence);
+        }
+        this.uiController.printBalance(currentPlayer);
+
+        if (currentPlayer.getAccount().getBalance() >= Config.WINNING_BALANCE) {
+            this.uiController.printWin(currentPlayer);
+            this.running = false;
+        }
+
+        if (currentTile.grantsExtraTurn()) {
+            this.playerController.setNextPlayer(currentPlayer);
         }
     }
 
     private void setup() {
-
-        /*
-         * setup players + accounts via playerController()
-         * setup Die via DieController()
-         * setup
-         * setup Language via languageController()
-         */
         this.uiController.promptForLanguage();
-        
+
         for (Player player : this.playerController.getPlayers()) {
             player.setName(this.uiController.promptForPlayerName(player));
         }
-
     }
 }
