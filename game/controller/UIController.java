@@ -1,5 +1,7 @@
 package game.controller;
 
+import game.i18n.LanguageController;
+
 public class UIController {
 
     private static UIController instance;
