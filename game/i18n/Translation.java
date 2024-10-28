@@ -10,6 +10,7 @@ public class Translation {
             Map.entry(Message.LANGUAGE_PROMPT, "The following languages are available: " + Language.stringValues() + ". Please enter your desired language and press enter!"),
             Map.entry(Message.CURRENT_PLAYER_BALANCE, "%playerName%'s balance is %playerBalance%"),
             Map.entry(Message.PLAYER_PRESS_TO_ROLL, "%playerName% press enter to roll the dice!"),
+            Map.entry(Message.PLAYER_NAME_UNIQUE_CONSTRAINT_VIOLATION, "A player with that name is already in the game, please enter a different name!"),
             Map.entry(Message.WIN, "%playerName% won the game!"),
             Map.entry(Message.TILE_TOWER, "%playerName% has entered the Tower and found 250 Gold coins!"),
             Map.entry(Message.TILE_CRATER, "%playerName% fell into a meteor crater and the aliens living there stole 100 goldpieces before you could get away."),

@@ -78,7 +78,12 @@ public class Game {
         this.uiController.promptForLanguage();
 
         for (Player player : this.playerController.getPlayers()) {
-            player.setName(this.uiController.promptForPlayerName(player));
+            try {
+                this.playerController.setPlayerName(player, this.uiController.promptForPlayerName(player));
+            } catch (IllegalArgumentException e) {
+                this.uiController.printPlayerNameUniqueConstraintViolation(player);
+                this.playerController.setPlayerName(player, this.uiController.promptForPlayerName(player));
+            }
         }
     }
 }

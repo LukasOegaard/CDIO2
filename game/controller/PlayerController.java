@@ -65,4 +65,13 @@ public class PlayerController {
         return this.players;
     }
 
+    public void setPlayerName(Player player, String name) {
+        for (Player current : this.players) {
+            if (current.getName().equalsIgnoreCase(name)) {
+                throw new IllegalArgumentException("Player with name " + name + " already exists!");
+            }
+        }
+        player.setName(name);
+    }
+
 }

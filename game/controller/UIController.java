@@ -59,4 +59,8 @@ public class UIController {
         Utils.println(this.languageController.getMessage(Message.WIN, player));
     }
 
+    public void printPlayerNameUniqueConstraintViolation(Player player) {
+        Utils.println(this.languageController.getMessage(Message.PLAYER_NAME_UNIQUE_CONSTRAINT_VIOLATION, player));
+    }
+
 }
