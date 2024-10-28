@@ -24,7 +24,7 @@ public class UIController {
         return instance;
     }
 
-    public String getPlayerName(Player player) {
+    public String promptForPlayerName(Player player) {
         Utils.println(this.languageController.getMessage(Message.ENTER_PLAYER_NAME, player));
         return this.inputController.getNextInput();
     }
