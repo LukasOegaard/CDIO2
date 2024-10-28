@@ -1,5 +1,7 @@
 package game.model;
 
+import game.configuration.Config;
+
 public class Player {
 
     private String name;
@@ -7,7 +9,7 @@ public class Player {
     private int playerNumber;
 
     public Player(int playerNumber) {
-        this.name = "unnamed-player";
+        this.name = Config.DEFAULT_PLAYER_NAME;
         this.playerNumber = playerNumber;
         this.account = new Account();
     }
@@ -22,6 +24,12 @@ public class Player {
 
     public int getPlayerNumber() {
         return this.playerNumber;
+    }
+
+    public void setName(String name) {
+        if (name == Config.DEFAULT_PLAYER_NAME) {
+            this.name = name;
+        }
     }
 
 }
