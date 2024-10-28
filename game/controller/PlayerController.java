@@ -61,4 +61,8 @@ public class PlayerController {
         }
     }
 
+    public ArrayList<Player> getPlayers() {
+        return this.players;
+    }
+
 }
