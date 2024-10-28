@@ -1,6 +1,8 @@
 package game;
 
 import game.model.Player;
+import game.util.DuplicatePlayerNameException;
+import game.util.IllegalPlayerNameException;
 import game.view.Utils;
 import game.configuration.Config;
 import game.controller.DieController;
@@ -80,9 +82,13 @@ public class Game {
         for (Player player : this.playerController.getPlayers()) {
             try {
                 this.playerController.setPlayerName(player, this.uiController.promptForPlayerName(player));
-            } catch (IllegalArgumentException e) {
-                this.uiController.printPlayerNameUniqueConstraintViolation(player);
-                this.playerController.setPlayerName(player, this.uiController.promptForPlayerName(player));
+            } catch (Exception e) {
+                if (e instanceof DuplicatePlayerNameException) {
+                    this.uiController.printPlayerNameUniqueConstraintViolation(player);
+                } else if (e instanceof IllegalPlayerNameException) {
+                    this.uiController.printPlayerNameIllegalChar(player);
+                }
+                this.running = false;
             }
         }
     }

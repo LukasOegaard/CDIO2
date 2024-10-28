@@ -63,4 +63,8 @@ public class UIController {
         Utils.println(this.languageController.getMessage(Message.PLAYER_NAME_UNIQUE_CONSTRAINT_VIOLATION, player));
     }
 
+    public void printPlayerNameIllegalChar(Player player) {
+        Utils.println(this.languageController.getMessage(Message.PLAYER_NAME_ILLEGAl_CHAR, player));
+    }
+
 }

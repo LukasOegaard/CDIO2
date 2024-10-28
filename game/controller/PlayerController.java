@@ -1,6 +1,8 @@
 package game.controller;
 
 import game.model.Player;
+import game.util.DuplicatePlayerNameException;
+import game.util.IllegalPlayerNameException;
 import game.configuration.Config;
 
 import java.util.NoSuchElementException;
@@ -65,10 +67,13 @@ public class PlayerController {
         return this.players;
     }
 
-    public void setPlayerName(Player player, String name) {
+    public void setPlayerName(Player player, String name) throws DuplicatePlayerNameException, IllegalPlayerNameException {
+        if (name.contains("%")) {
+            throw new IllegalPlayerNameException("Player name cannot contain %");
+        }
         for (Player current : this.players) {
             if (current.getName().equalsIgnoreCase(name)) {
-                throw new IllegalArgumentException("Player with name " + name + " already exists!");
+                throw new DuplicatePlayerNameException("Player with name " + name + " already exists!");
             }
         }
         player.setName(name);
