@@ -24,7 +24,7 @@ public class LanguageController {
         return this.language;
     }
 
-    public void setLanguange(Language language) {
+    public void setLanguage(Language language) {
         this.language = language;
     }
 
