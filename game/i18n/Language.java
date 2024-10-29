@@ -1,4 +1,4 @@
-package game.i18n;
+package i18n;
 
 public enum Language {
     ENGLISH("english"), STUPID("stupid");

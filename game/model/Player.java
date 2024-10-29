@@ -1,6 +1,6 @@
-package game.model;
+package model;
 
-import game.configuration.Config;
+import configuration.Config;
 
 public class Player {
 

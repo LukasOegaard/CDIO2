@@ -1,4 +1,4 @@
-package game.i18n;
+package i18n;
 
 import java.util.Map;
 

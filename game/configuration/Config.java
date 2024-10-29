@@ -1,4 +1,4 @@
-package game.configuration;
+package configuration;
 
 public class Config {
     

@@ -1,16 +1,12 @@
-package game;
-
-import game.model.Player;
-import game.util.DuplicatePlayerNameException;
-import game.util.IllegalPlayerNameException;
-import game.view.Utils;
-import game.configuration.Config;
-import game.controller.DieController;
-import game.controller.PlayerController;
-import game.controller.Tile;
-import game.controller.TileController;
-import game.controller.UIController;
-import game.i18n.LanguageController;
+import model.Player;
+import util.DuplicatePlayerNameException;
+import util.IllegalPlayerNameException;
+import configuration.Config;
+import controller.DieController;
+import controller.PlayerController;
+import controller.Tile;
+import controller.TileController;
+import controller.UIController;
 
 public class Game {
 
@@ -20,7 +16,6 @@ public class Game {
     private DieController dieController;
     private TileController tileController;
     private UIController uiController;
-    private LanguageController languageController;
 
     public static void main(String[] args) {
         getInstance().startGame();
@@ -32,7 +27,6 @@ public class Game {
         this.dieController = DieController.getInstance();
         this.tileController = TileController.getInstance();
         this.uiController = UIController.getInstance();
-        this.languageController = LanguageController.getInstance();
     }
 
     public static Game getInstance() {

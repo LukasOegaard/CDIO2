@@ -1,4 +1,4 @@
-package game.controller;
+package controller;
 
 public enum Tile {
     TOWER("Tower", 2, 250, false),

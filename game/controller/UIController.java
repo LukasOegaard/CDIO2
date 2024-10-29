@@ -1,10 +1,10 @@
-package game.controller;
+package controller;
 
-import game.i18n.Language;
-import game.i18n.LanguageController;
-import game.i18n.Message;
-import game.model.Player;
-import game.view.Utils;
+import i18n.Language;
+import i18n.LanguageController;
+import i18n.Message;
+import model.Player;
+import view.Utils;
 
 public class UIController {
 
