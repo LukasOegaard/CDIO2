@@ -16,15 +16,15 @@ public class Translation {
                             "A player with that name is already in the game, closing game!"),
                     Map.entry(Message.PLAYER_NAME_ILLEGAl_CHAR, "Player name cannot contain %, closing game!"),
                     Map.entry(Message.WIN, "%playerName% won the game!"),
-                    Map.entry(Message.TILE_TOWER, "%playerName% has entered the Tower and found 250 Gold coins!"),
+                    Map.entry(Message.TILE_TOWER, "%playerName% has entered the Tower and found 250 gold pieces!"),
                     Map.entry(Message.TILE_CRATER,
-                            "%playerName% fell into a meteor crater and the aliens living there stole 100 goldpieces before you could get away."),
+                            "%playerName% fell into a meteor crater and the aliens living there stole 100 gold pieces before you could get away."),
                     Map.entry(Message.TILE_PALACE_GATES,
-                            "%playerName% inpected the dead Knight outside the Palace Gate and found 100 gold pieces."),
+                            "%playerName% inspected the dead Knight outside the Palace Gate and found 100 gold pieces."),
                     Map.entry(Message.TILE_COLD_DESERT,
                             "You had to rest in the Cold Desert to survive the night you bought some firewood for 20 gold pieces from a wondering merchant."),
                     Map.entry(Message.TILE_WALLED_CITY,
-                            "Crazy lunatics were throwing all there gold of from the Wall. %playerName% maneged to gather 180 gold pieces from the ground."),
+                            "Crazy lunatics were throwing all their gold of from the Wall. %playerName% managed to gather 180 gold pieces from the ground."),
                     Map.entry(Message.TILE_MONASTARY, "%playerName% entered the monastery."),
                     Map.entry(Message.TILE_BLACK_CAVE,
                             "%playerName% while you went through the black cave you dropped some gold and couldn't find it again due to the dense darkness. You lost 70 gold pieces."),
@@ -33,9 +33,9 @@ public class Translation {
                     Map.entry(Message.TILE_THE_WEREWALL,
                             "%playerName% walked into the infamous WEREWALL you got so scared you tossed 80 gold pieces in different direction but you got ENERGIZED and you move on"),
                     Map.entry(Message.TILE_THE_PIT,
-                            "%playerName% you fell into the Pit while couning your gold and dropped 50 pieces that fell down a crevice"),
+                            "%playerName% you fell into the Pit while counting your gold and dropped 50 gold pieces that fell down a crevice"),
                     Map.entry(Message.TILE_GOLDMINE,
-                            "%playerName you found the rumored abbandonned goldmine and 650 goldpieces.")
+                            "%playerName% you found the rumored abandoned goldmine and found 650 gold pieces.")
 
             )),
             Map.entry(Language.STUPID, Map.ofEntries(
