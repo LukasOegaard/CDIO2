@@ -59,6 +59,51 @@ public class UIController {
         Utils.println(this.languageController.getMessage(Message.WIN, player));
     }
 
+    public void printTileText(Tile tile, Player player) {
+        
+        Message tileMessage;
+        switch (tile) {
+            case TOWER:
+                tileMessage = Message.TILE_TOWER;
+                break;
+            case CRATER:
+                tileMessage = Message.TILE_CRATER;
+                break;
+            case PALACE_GATES:
+                tileMessage = Message.TILE_PALACE_GATES;
+                break;
+            case COLD_DESERT:
+                tileMessage = Message.TILE_COLD_DESERT;
+                break;
+            case WALLED_CITY:
+                tileMessage = Message.TILE_WALLED_CITY;
+                break;
+            case MONASTERY:
+                tileMessage = Message.TILE_MONASTARY;
+                break;
+            case BLACK_CAVE:
+                tileMessage = Message.TILE_BLACK_CAVE;
+                break;
+            case HUTS_IN_THE_MOUNTAIN:
+                tileMessage = Message.TILE_HUTS_IN_THE_MOUNTAIN;
+                break;
+            case THE_WEREWALL:
+                tileMessage = Message.TILE_THE_WEREWALL;
+                break;
+            case THE_PIT:
+                tileMessage = Message.TILE_THE_PIT;
+                break;
+            case GOLDMINE:
+                tileMessage = Message.TILE_GOLDMINE;
+                break;
+            default:
+                throw new IllegalArgumentException("Error no such Tile");
+
+        }
+
+        Utils.println(this.languageController.getMessage(tileMessage, player));
+    }
+
     public void printPlayerNameUniqueConstraintViolation(Player player) {
         Utils.println(this.languageController.getMessage(Message.PLAYER_NAME_UNIQUE_CONSTRAINT_VIOLATION, player));
     }
@@ -66,5 +111,7 @@ public class UIController {
     public void printPlayerNameIllegalChar(Player player) {
         Utils.println(this.languageController.getMessage(Message.PLAYER_NAME_ILLEGAl_CHAR, player));
     }
+
+
 
 }
