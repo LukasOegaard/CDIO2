@@ -3,14 +3,12 @@ package game;
 import game.model.Player;
 import game.util.DuplicatePlayerNameException;
 import game.util.IllegalPlayerNameException;
-import game.view.Utils;
 import game.configuration.Config;
 import game.controller.DieController;
 import game.controller.PlayerController;
 import game.controller.Tile;
 import game.controller.TileController;
 import game.controller.UIController;
-import game.i18n.LanguageController;
 
 public class Game {
 
@@ -20,7 +18,6 @@ public class Game {
     private DieController dieController;
     private TileController tileController;
     private UIController uiController;
-    private LanguageController languageController;
 
     public static void main(String[] args) {
         getInstance().startGame();
@@ -32,7 +29,6 @@ public class Game {
         this.dieController = DieController.getInstance();
         this.tileController = TileController.getInstance();
         this.uiController = UIController.getInstance();
-        this.languageController = LanguageController.getInstance();
     }
 
     public static Game getInstance() {
@@ -61,7 +57,9 @@ public class Game {
         int sum = this.dieController.getSum();
         Tile currentTile = this.tileController.getTile(sum);
         this.uiController.printTileText(currentTile, currentPlayer);
-//        Utils.println(currentPlayer.getName() + " landed on " + this.uiController.printTileText(currentTile, currentPlayer) + " " + Integer.toString(sum));
+        // Utils.println(currentPlayer.getName() + " landed on " +
+        // this.uiController.printTileText(currentTile, currentPlayer) + " " +
+        // Integer.toString(sum));
         int scoreConsequence = currentTile.getConsequence();
         if (scoreConsequence > 0) {
             currentPlayer.getAccount().increaseBalance(scoreConsequence);
