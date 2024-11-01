@@ -69,7 +69,7 @@ public class Translation {
                     Map.entry(Message.TILE_THE_PIT,
                             "%playerName% fell into the Pit while counting your gold and dropped 50 pieces that fell down a crevice"),
                     Map.entry(Message.TILE_GOLDMINE,
-                            "%playerName you found the rumored abandoned goldmine and found 650 gold pieces.")
+                            "%playerName% you found the rumored abandoned goldmine and found 650 gold pieces.")
 
             )));
 
