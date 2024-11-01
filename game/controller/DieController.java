@@ -1,6 +1,6 @@
-package controller;
+package game.controller;
 
-import model.Die;
+import game.model.Die;
 
 public class DieController{
 

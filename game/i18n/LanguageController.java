@@ -1,7 +1,7 @@
-package i18n;
+package game.i18n;
 
-import configuration.Config;
-import model.Player;
+import game.configuration.Config;
+import game.model.Player;
 
 public class LanguageController {
 

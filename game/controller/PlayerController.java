@@ -1,9 +1,9 @@
-package controller;
+package game.controller;
 
-import model.Player;
-import util.DuplicatePlayerNameException;
-import util.IllegalPlayerNameException;
-import configuration.Config;
+import game.model.Player;
+import game.util.DuplicatePlayerNameException;
+import game.util.IllegalPlayerNameException;
+import game.configuration.Config;
 
 import java.util.NoSuchElementException;
 import java.util.ArrayList;

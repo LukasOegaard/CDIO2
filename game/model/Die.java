@@ -1,6 +1,6 @@
-package model;
+package game.model;
 
-import configuration.Config;
+import game.configuration.Config;
 
 public class Die {
     
