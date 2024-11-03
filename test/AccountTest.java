@@ -7,7 +7,7 @@ public class AccountTest {
 
     public static void main(String[] args) {
         Account account = new Account();
-        account.decreaseBalance(1001); // default balance is 1000
+        account.applyConsequence(1001); // default balance is 1000
         if (account.getBalance() < 0) {
             System.out.println("test failed");
         } else {

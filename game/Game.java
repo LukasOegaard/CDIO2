@@ -47,25 +47,14 @@ public class Game {
     }
 
     private void gameLoop() {
-        // current player rolls
-        // handle balance and printing
-        // show balance
-        // handle winning case
         Player currentPlayer = this.playerController.getNextPlayer();
         this.uiController.printRoll(currentPlayer);
         this.dieController.rollBoth();
         int sum = this.dieController.getSum();
         Tile currentTile = this.tileController.getTile(sum);
         this.uiController.printTileText(currentTile, currentPlayer);
-        // Utils.println(currentPlayer.getName() + " landed on " +
-        // this.uiController.printTileText(currentTile, currentPlayer) + " " +
-        // Integer.toString(sum));
         int scoreConsequence = currentTile.getConsequence();
-        if (scoreConsequence > 0) {
-            currentPlayer.getAccount().increaseBalance(scoreConsequence);
-        } else {
-            currentPlayer.getAccount().decreaseBalance(scoreConsequence);
-        }
+        currentPlayer.getAccount().applyConsequence(scoreConsequence);
         this.uiController.printBalance(currentPlayer);
 
         if (currentPlayer.getAccount().getBalance() >= Config.WINNING_BALANCE) {

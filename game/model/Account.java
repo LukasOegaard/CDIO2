@@ -12,12 +12,8 @@ public class Account {
         return this.balance;
     }
 
-    public void increaseBalance(int balanceIncrease) {
-        this.balance += balanceIncrease;
-    }
-
-    public void decreaseBalance(int balanceDecrease) {
-        this.balance -= balanceDecrease;
+    public void applyConsequence(int scoreConsequence) {
+        this.balance += scoreConsequence;
         if (this.balance < 0) {
             this.balance = 0;
         }
